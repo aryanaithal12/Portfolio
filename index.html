@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Aithal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e2a00469ec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo" class="logo">
+                <Ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </Ul>
+            </nav>
+            <div class="header-text">
+                <p>
+                    Python developer
+                </p>
+                <h1>Hi, I am <span>Aryan</span> <br> from Bangalore, India</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="My image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-titel">About me</h1>
+                    <p>
+                       I'm a hard-working Python developer with a passion for data visualization, who has been working in the industry for over three years. I've worked on projects ranging from small personal websites to large web applications, and I've always been able to apply my skills to any problem at hand.<br><br>
+
+                        I'm skilled at data sets and plotting functionality, along with writing code that does what it needs to do quickly and efficiently. I have a lot of experience working with different databases, as well as using multiple programming languages. <br><br>
+
+                        I'd love to hear from you if you're looking for someone who can get your project done—and done right!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>GUI</span><br>Build graphical user interface using tkinter</li>
+                                <li><span>ML</span><br>Deploye ML models</li>
+                                <li><span>Web scraping</span><br>Using Selenium module</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>GUI</span><br>Built a clock</li>
+                                <li><span>ML</span><br>Created a ML module to test and predict Alzheimer's Disease</li>
+                                <li><span>Web scraping</span><br>Instagram follower bot</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>100 Days of code: python</span><br>On udemy</li>
+                                <li><span>B.Tech AI ML</span><br>From UVCE, Bangelore.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-titel">My Servives</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>ML models</h2>
+                    <p>I can build models for you, depending on what you need. I have experience with a variety of machine learning algorithms, and can help you choose the best one for your needs.</p>
+                    <a href="#" id="service-link">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-apple"></i>
+                    <h2>Applications</h2>
+                    <p>We specialize in building custom applications for our clients. We have a wide range of experience in developing custom software applications from scratch, as well as modifying and customizing existing applications.</p>
+                    <a href="#" id="service-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titel">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="my first work">
+                    <div class="layer">
+                        <h3>
+                           Flash card app  
+                        </h3>
+                        <p>Provides you with flash card to learn a language faster</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="my second work">
+                    <div class="layer">
+                        <h3>
+                           Password manager  
+                        </h3>
+                        <p>Makes your job easier by remembering your passwords</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="my third work">
+                    <div class="layer">
+                        <h3>
+                           Mail merge  
+                        </h3>
+                        <p>Sends multiple mail for you</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
